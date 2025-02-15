@@ -57,9 +57,10 @@ class SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return Splashviewbody(
-        controller: _controller,
-        rotationAnimation: _rotationAnimation,
-        scaleAnimation: _scaleAnimation,
-        fadeAnimation: _fadeAnimation);
+      controller: _controller,
+      rotationAnimation: _rotationAnimation,
+      scaleAnimation: _scaleAnimation,
+      fadeAnimation: _fadeAnimation,
+    );
   }
 }

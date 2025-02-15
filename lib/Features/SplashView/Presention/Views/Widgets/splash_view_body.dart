@@ -47,9 +47,10 @@ class Splashviewbody extends StatelessWidget {
               child: Text(
                 'I Movie',
                 style: TextStyle(
-                    fontSize: 28,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold),
+                  fontSize: 28,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ],
