@@ -16,15 +16,14 @@ class MovieDetailsViewBody extends StatelessWidget {
             Align(
               alignment: Alignment.centerLeft,
               child: IconButton(
-                icon: Icon(
-                  Icons.arrow_back_ios_rounded,
-                ),
-                color: Colors.white,
-                onPressed: () {
-                  Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => HomeView()));
-                },
-              ),
+                  icon: Icon(
+                    Icons.arrow_back_ios_rounded,
+                  ),
+                  color: Colors.white,
+                  onPressed: () {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) => HomeView()));
+                  }),
             ),
             SizedBox(
               height: 20,

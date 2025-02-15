@@ -9,9 +9,7 @@ class MovieDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: MovieDetailsViewBody(
-        movie: movie,
-      ),
+      body: MovieDetailsViewBody(movie: movie),
     );
   }
 }
