@@ -11,28 +11,26 @@ class MovieShowSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Align(
-            alignment: Alignment.centerLeft,
-            child: Text('Trending Now', style: AppStyles.style20bold)),
-        SizedBox(height: 10),
-        TreandingListView(),
-        SizedBox(height: 10),
-        Align(
+    return Column(children: [
+      Align(
           alignment: Alignment.centerLeft,
-          child: Text('Upcoming', style: AppStyles.style20bold),
-        ),
-        SizedBox(height: 10),
-        UpcommingListView(),
-        SizedBox(height: 10),
-        Align(
-          alignment: Alignment.centerLeft,
-          child: Text('Top Rated', style: AppStyles.style20bold),
-        ),
-        SizedBox(height: 10),
-        TopRatedListView(),
-      ],
-    );
+          child: Text('Trending Now', style: AppStyles.style20bold)),
+      SizedBox(height: 10),
+      TreandingListView(),
+      SizedBox(height: 10),
+      Align(
+        alignment: Alignment.centerLeft,
+        child: Text('Upcoming', style: AppStyles.style20bold),
+      ),
+      SizedBox(height: 10),
+      UpcommingListView(),
+      SizedBox(height: 10),
+      Align(
+        alignment: Alignment.centerLeft,
+        child: Text('Top Rated', style: AppStyles.style20bold),
+      ),
+      SizedBox(height: 10),
+      TopRatedListView(),
+    ]);
   }
 }
