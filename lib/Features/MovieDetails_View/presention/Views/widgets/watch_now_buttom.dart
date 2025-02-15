@@ -23,7 +23,7 @@ class WatchNowBottom extends StatelessWidget {
             "Watch Now",
             style: TextStyle(
                 fontSize: 18, color: Colors.white, fontWeight: FontWeight.bold),
-          ),
+          )
         ],
       ),
     );

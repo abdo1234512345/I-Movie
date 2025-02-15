@@ -10,12 +10,7 @@ class ButtomPlayandDownload extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        WatchNowBottom(),
-        SizedBox(width: 16),
-        DownloadBottom(),
-      ],
-    );
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [WatchNowBottom(), SizedBox(width: 16), DownloadBottom()]);
   }
 }
