@@ -11,14 +11,15 @@ class MovieItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 16, right: 16),
       child: Container(
-          width: MediaQuery.sizeOf(context).width * .3,
-          height: MediaQuery.sizeOf(context).height * .2,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12),
-          ),
-          child: Column(
-            children: [Image.network(url + moviesModel.poster_path)],
-          )),
+        width: MediaQuery.sizeOf(context).width * .3,
+        height: MediaQuery.sizeOf(context).height * .2,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Column(
+          children: [Image.network(url + moviesModel.poster_path)],
+        ),
+      ),
     );
   }
 }
