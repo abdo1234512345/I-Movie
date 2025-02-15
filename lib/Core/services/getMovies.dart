@@ -99,7 +99,7 @@ class Moviess {
   Future<List<MoviesModel>> searching() async {
     try {
       var response = await dio.get(
-          'https://api.themoviedb.org/3/search/keyword?page=1&api_key=a58058cdf2b779da47dd67884dd07500'); // YOU NEED QUERY FOR SEARCH
+          'https://api.themoviedb.org/3/search/keyword?page=1&api_key=a58058cdf2b779da47dd67884dd07500');
 
       Map<String, dynamic> jsondata = response.data;
 
