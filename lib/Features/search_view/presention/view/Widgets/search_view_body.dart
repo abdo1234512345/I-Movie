@@ -5,7 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:movieapp/Features/search_view/presention/view/Widgets/search_result.dart';
 
 class SearchViewBody extends StatefulWidget {
-  const SearchViewBody({super.key});
+  const SearchViewBody({
+    super.key,
+  });
 
   @override
   SearchViewBodyState createState() => SearchViewBodyState();
