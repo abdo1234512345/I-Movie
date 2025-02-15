@@ -2,6 +2,7 @@
 
 import 'package:dio/dio.dart';
 import 'package:movieapp/Core/models/model.dart';
+import 'package:movieapp/Core/services/api_key.dart';
 
 class Moviess {
   final Dio dio;
@@ -11,7 +12,7 @@ class Moviess {
   Future<List<MoviesModel>> getMovies() async {
     try {
       var response = await dio.get(
-          'https://api.themoviedb.org/3/discover/movie?include_adult=true&include_video=false&language=en-US&page=1&sort_by=popularity.desc&api_key=a58058cdf2b779da47dd67884dd07500');
+          'https://api.themoviedb.org/3/discover/movie?include_adult=true&include_video=false&language=en-US&page=1&sort_by=popularity.desc&api_key=$api_key');
 
       Map<String, dynamic> jsondata = response.data;
 
@@ -33,7 +34,7 @@ class Moviess {
   Future<List<MoviesModel>> getTrandingMovies() async {
     try {
       var response = await dio.get(
-          'https://api.themoviedb.org/3/trending/movie/day?language=en-US&api_key=a58058cdf2b779da47dd67884dd07500');
+          'https://api.themoviedb.org/3/trending/movie/day?language=en-US&api_key=$api_key');
 
       Map<String, dynamic> jsondata = response.data;
 
@@ -55,7 +56,7 @@ class Moviess {
   Future<List<MoviesModel>> topRated() async {
     try {
       var response = await dio.get(
-          'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1&api_key=a58058cdf2b779da47dd67884dd07500');
+          'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1&api_key=$api_key');
 
       Map<String, dynamic> jsondata = response.data;
 
@@ -77,7 +78,7 @@ class Moviess {
   Future<List<MoviesModel>> upcomming() async {
     try {
       var response = await dio.get(
-          'https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1&api_key=a58058cdf2b779da47dd67884dd07500');
+          'https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1&api_key=$api_key');
 
       Map<String, dynamic> jsondata = response.data;
 
@@ -99,7 +100,7 @@ class Moviess {
   Future<List<MoviesModel>> searching() async {
     try {
       var response = await dio.get(
-          'https://api.themoviedb.org/3/search/keyword?page=1&api_key=a58058cdf2b779da47dd67884dd07500');
+          'https://api.themoviedb.org/3/search/keyword?page=1&api_key=$api_key');
 
       Map<String, dynamic> jsondata = response.data;
 

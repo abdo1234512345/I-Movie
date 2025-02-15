@@ -2,6 +2,7 @@
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:movieapp/Core/services/api_key.dart';
 import 'package:movieapp/Features/search_view/presention/view/Widgets/search_result.dart';
 
 class SearchViewBody extends StatefulWidget {
@@ -26,7 +27,7 @@ class SearchViewBodyState extends State<SearchViewBody> {
       final response = await Dio().get(
         'https://api.themoviedb.org/3/search/movie',
         queryParameters: {
-          'api_key': 'a58058cdf2b779da47dd67884dd07500',
+          'api_key': api_key,
           'page': 1,
           'query': _controller.text,
         },
