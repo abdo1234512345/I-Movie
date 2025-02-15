@@ -36,7 +36,7 @@ class CustomCategorybody extends StatelessWidget {
             height: 5,
           ),
         ),
-        CustomSliverGridViewBody(movie: movie),
+        CustomSliverGridViewBody(movie: movie)
       ],
     );
   }

@@ -24,14 +24,12 @@ class BuildCategoryContainer extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             border: Border.all(color: color, width: 2),
           ),
-          child: Text(
-            title,
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
-              color: color,
-            ),
-          ),
+          child: Text(title,
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+                color: color,
+              )),
         ),
       ),
     );
