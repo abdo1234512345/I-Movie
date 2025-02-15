@@ -30,9 +30,8 @@ class HomeContentState extends State<HomeContent> {
           SingleChildScrollView(
             physics: AlwaysScrollableScrollPhysics(),
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 19),
-              child: HomeContentBody(),
-            ),
+                padding: const EdgeInsets.symmetric(horizontal: 19),
+                child: HomeContentBody()),
           ),
         ],
       ),
