@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movieapp/Features/search_view/presention/view/Widgets/no_image.dart';
 
 class SearchResult extends StatelessWidget {
   const SearchResult({
@@ -25,13 +26,7 @@ class SearchResult extends StatelessWidget {
                       height: 160,
                       fit: BoxFit.cover,
                     )
-                  : Container(
-                      width: 120,
-                      height: 160,
-                      color: Colors.grey,
-                      child:
-                          Icon(Icons.image_not_supported, color: Colors.white),
-                    ),
+                  : NOImage(),
               title: Text(
                 _results[index]['title'] ?? 'No Title',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
