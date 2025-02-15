@@ -25,7 +25,9 @@ class _UpcommingListViewState extends State<UpcommingListView> {
 
   Future<void> getUpcomming() async {
     movie = await Moviess(Dio()).upcomming();
-    setState(() {});
+    setState(
+      () {},
+    );
   }
 
   Future<void> clearCache() async {

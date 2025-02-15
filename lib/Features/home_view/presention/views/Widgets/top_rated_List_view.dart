@@ -26,7 +26,9 @@ class _TopRatedListView extends State<TopRatedListView> {
   // ignore: non_constant_identifier_names
   Future<void> GetRatedMovies() async {
     movie = await Moviess(Dio()).topRated();
-    setState(() {});
+    setState(
+      () {},
+    );
   }
 
   Future<void> clearCache() async {

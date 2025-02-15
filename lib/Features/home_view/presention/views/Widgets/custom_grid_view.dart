@@ -37,9 +37,6 @@ class _CustomCateoryBodyState extends State<CustomCateoryBody> {
 
   @override
   Widget build(BuildContext context) {
-    return CustomCategorybody(
-      movie: movie,
-      text: 'Drama',
-    );
+    return CustomCategorybody(movie: movie, text: 'Drama');
   }
 }

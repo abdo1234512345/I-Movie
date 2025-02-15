@@ -13,36 +13,35 @@ class CustomSliverGridViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverPadding(
-      padding: EdgeInsets.all(10),
-      sliver: SliverGrid(
-        delegate: SliverChildBuilderDelegate(
-          (context, index) {
-            return Container(
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: GestureDetector(
-                onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) =>
-                            MovieDetailsViewBody(movie: movie[index]))),
-                child: Image.network(
-                  movie[index].poster_path,
-                  height: MediaQuery.sizeOf(context).height * .3,
-                  width: MediaQuery.sizeOf(context).width * .5,
+        padding: EdgeInsets.all(10),
+        sliver: SliverGrid(
+          delegate: SliverChildBuilderDelegate(
+            (context, index) {
+              return Container(
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
                 ),
-              ),
-            );
-          },
-          childCount: movie.length, // Total number of items
-        ),
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 3,
-          mainAxisSpacing: 20,
-        ),
-      ),
-    );
+                child: GestureDetector(
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              MovieDetailsViewBody(movie: movie[index]))),
+                  child: Image.network(
+                    movie[index].poster_path,
+                    height: MediaQuery.sizeOf(context).height * .3,
+                    width: MediaQuery.sizeOf(context).width * .5,
+                  ),
+                ),
+              );
+            },
+            childCount: movie.length, // Total number of items
+          ),
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3,
+            mainAxisSpacing: 20,
+          ),
+        ));
   }
 }

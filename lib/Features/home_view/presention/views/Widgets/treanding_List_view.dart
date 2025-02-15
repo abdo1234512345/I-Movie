@@ -26,7 +26,9 @@ class _TreandingListViewState extends State<TreandingListView> {
   // ignore: non_constant_identifier_names
   Future<void> GetTreandingMovies() async {
     movie = await Moviess(Dio()).getTrandingMovies();
-    setState(() {});
+    setState(
+      () {},
+    );
   }
 
   Future<void> clearCache() async {

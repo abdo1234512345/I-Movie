@@ -21,30 +21,29 @@ class UpcomingListViewBody extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           return ClipRRect(
-            borderRadius: BorderRadius.circular(12),
-            child: Padding(
-              padding: const EdgeInsets.only(right: 12),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) =>
-                          MovieDetailsViewBody(movie: movie[index]),
-                    ),
-                  );
-                },
-                child: CachedNetworkImage(
-                  imageUrl: movie[index].poster_path,
-                  fit: BoxFit.cover,
-                  placeholder: (context, url) =>
-                      Center(child: CircularProgressIndicator()),
-                  errorWidget: (context, url, error) =>
-                      Icon(Icons.error, color: Colors.red),
+              borderRadius: BorderRadius.circular(12),
+              child: Padding(
+                padding: const EdgeInsets.only(right: 12),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            MovieDetailsViewBody(movie: movie[index]),
+                      ),
+                    );
+                  },
+                  child: CachedNetworkImage(
+                    imageUrl: movie[index].poster_path,
+                    fit: BoxFit.cover,
+                    placeholder: (context, url) =>
+                        Center(child: CircularProgressIndicator()),
+                    errorWidget: (context, url, error) =>
+                        Icon(Icons.error, color: Colors.red),
+                  ),
                 ),
-              ),
-            ),
-          );
+              ));
         },
       ),
     );

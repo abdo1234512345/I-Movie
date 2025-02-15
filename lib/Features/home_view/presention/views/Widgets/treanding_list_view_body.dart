@@ -14,37 +14,36 @@ class TreandingListViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.sizeOf(context).height * .24,
-      width: double.infinity,
-      child: ListView.builder(
-        itemBuilder: (context, index) {
-          return ClipRRect(
-            borderRadius: BorderRadius.circular(12),
-            child: Padding(
-              padding: const EdgeInsets.only(right: 12),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>
-                              MovieDetailsViewBody(movie: movie[index])));
-                },
-                child: CachedNetworkImage(
-                  imageUrl: movie[index].poster_path,
-                  fit: BoxFit.cover,
-                  placeholder: (context, url) =>
-                      Center(child: CircularProgressIndicator()),
-                  errorWidget: (context, url, error) =>
-                      Icon(Icons.error, color: Colors.red),
+        height: MediaQuery.sizeOf(context).height * .24,
+        width: double.infinity,
+        child: ListView.builder(
+          itemBuilder: (context, index) {
+            return ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Padding(
+                padding: const EdgeInsets.only(right: 12),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                MovieDetailsViewBody(movie: movie[index])));
+                  },
+                  child: CachedNetworkImage(
+                    imageUrl: movie[index].poster_path,
+                    fit: BoxFit.cover,
+                    placeholder: (context, url) =>
+                        Center(child: CircularProgressIndicator()),
+                    errorWidget: (context, url, error) =>
+                        Icon(Icons.error, color: Colors.red),
+                  ),
                 ),
               ),
-            ),
-          );
-        },
-        itemCount: movie.length,
-        scrollDirection: Axis.horizontal,
-      ),
-    );
+            );
+          },
+          itemCount: movie.length,
+          scrollDirection: Axis.horizontal,
+        ));
   }
 }
