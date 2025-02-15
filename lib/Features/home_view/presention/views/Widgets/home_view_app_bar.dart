@@ -27,14 +27,15 @@ class HomeViewAppBar extends StatelessWidget {
           width: 160,
         ),
         IconButton(
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => SearchView()));
-            },
-            icon: Icon(
-              Icons.search,
-              size: 28,
-            ))
+          onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => SearchView()));
+          },
+          icon: Icon(
+            Icons.search,
+            size: 28,
+          ),
+        )
       ],
     );
   }
