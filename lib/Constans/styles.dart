@@ -17,6 +17,7 @@ abstract class AppStyles {
     fontSize: 20,
     fontWeight: FontWeight.w700,
   );
+
   static const TextStyle style20regular = TextStyle(
     color: Color(0xffffffff),
     fontSize: 20,
