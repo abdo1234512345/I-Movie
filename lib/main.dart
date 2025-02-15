@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:movieapp/Features/SplashView/Presention/Views/splash_view.dart';
 
 void main() {
-  runApp(
-    MovieApp(),
-  );
+  runApp(MovieApp());
 }
 
 class MovieApp extends StatelessWidget {
