@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:movieapp/Features/SplashView/Presention/Views/splash_view.dart';
 
 void main() {
-  runApp(const MovieApp());
+  runApp(
+    MovieApp(),
+  );
 }
 
 class MovieApp extends StatelessWidget {
@@ -9,6 +12,12 @@ class MovieApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SplashView();
+    return SafeArea(
+      child: MaterialApp(
+        darkTheme: ThemeData.dark(),
+        home: SplashScreen(),
+        debugShowCheckedModeBanner: false,
+      ),
+    );
   }
 }

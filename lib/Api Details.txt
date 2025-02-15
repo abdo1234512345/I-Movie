@@ -1,0 +1,8 @@
+api link:
+
+https://api.themoviedb.org/3/discover/movie?include_adult=true&include_video=false&language=en-US&page=1&sort_by=popularity.desc&api_key=a58058cdf2b779da47dd67884dd07500
+
+
+website link:
+
+https://developer.themoviedb.org/reference/discover-movie
