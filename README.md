@@ -22,7 +22,7 @@ _Coming Soon!_
 ## 📦 Installation
 ```sh
 # Clone the repository
-git clone https://github.com/AbdelRahman Amr /i-movie.git
+git clone https://github.com/abdo1234512345 /i-movie.git
 
 # Navigate to the project folder
 cd i-movie
