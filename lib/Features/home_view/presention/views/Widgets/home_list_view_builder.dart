@@ -5,38 +5,35 @@ import 'package:movieapp/Core/services/getMovies.dart';
 import 'package:movieapp/Features/home_view/presention/views/Widgets/home_list_view.dart';
 
 class HomeListViewBuilder extends StatefulWidget {
-  const HomeListViewBuilder({
-    super.key,
-  });
+  const HomeListViewBuilder({super.key});
 
   @override
   State<HomeListViewBuilder> createState() => _HomeListViewBuilderState();
 }
 
 class _HomeListViewBuilderState extends State<HomeListViewBuilder> {
-  List<MoviesModel> movie = [];
-  bool isloading = true;
+  var future;
   @override
   void initState() {
     super.initState();
-    GetMovies();
-  }
-
-  // ignore: non_constant_identifier_names
-  Future<void> GetMovies() async {
-    movie = await Moviess(Dio()).getMovies();
-    isloading = false;
-    setState(() {});
+    future = Moviess(Dio(), kind: 'top_rated').topRated();
   }
 
   @override
   Widget build(BuildContext context) {
-    return isloading
-        ? Center(
+    return FutureBuilder<List<MoviesModel>>(
+      future: future,
+      builder: (context, snapshot) {
+        if (snapshot.hasData) {
+          return HomeListView(movie: snapshot.data!);
+        } else if (snapshot.hasError) {
+          return Text("error");
+        } else {
+          return Center(
             child: CircularProgressIndicator(),
-          )
-        : HomeListView(
-            movie: movie,
           );
+        }
+      },
+    );
   }
 }

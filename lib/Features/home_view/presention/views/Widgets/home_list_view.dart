@@ -11,7 +11,6 @@ class HomeListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CarouselSlider.builder(
-      itemCount: movie.length,
       itemBuilder: (context, index, realIndex) {
         return GestureDetector(
           onTap: () => Navigator.pushReplacement(
@@ -34,6 +33,7 @@ class HomeListView extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         height: 300,
       ),
+      itemCount: movie.length,
     );
   }
 }

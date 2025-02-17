@@ -2,7 +2,6 @@
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:movieapp/Core/models/model.dart';
 import 'package:movieapp/Core/services/getMovies.dart';
 import 'package:movieapp/Features/home_view/presention/views/Widgets/custom_category_body.dart';
 
@@ -15,28 +14,19 @@ class CustomCateory extends StatelessWidget {
   }
 }
 
-class CustomCateoryBody extends StatefulWidget {
+class CustomCateoryBody extends StatelessWidget {
   const CustomCateoryBody({super.key});
 
   @override
-  State<CustomCateoryBody> createState() => _CustomCateoryBodyState();
-}
-
-class _CustomCateoryBodyState extends State<CustomCateoryBody> {
-  List<MoviesModel> movie = [];
-  @override
-  void initState() {
-    super.initState();
-    GetNewMovies();
-  }
-
-  Future<void> GetNewMovies() async {
-    movie = await Moviess(Dio()).getTrandingMovies();
-    setState(() {});
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return CustomCategorybody(movie: movie, text: 'Drama');
+    return FutureBuilder(
+      future: Moviess(Dio(), kind: 'top_rated').getTrandingMovies(),
+      builder: (context, snapshot) {
+        return CustomCategorybody(
+          movie: snapshot.data ?? [],
+          text: 'Drama',
+        );
+      },
+    );
   }
 }
